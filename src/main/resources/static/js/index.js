@@ -24,7 +24,6 @@ function updatePage(station) {
             $('#results').empty();
             var platform = "";
             for (var key in scheduleJSON) {
-                //var option = new Option(scheduleJSON[key].destination, scheduleJSON[key].abbreviation);scheduleJSON[key].hexcolor) scheduleJSON[key].color
                 var train = scheduleJSON[key].abbreviation;
                 var color = scheduleJSON[key].color;
                 var hexColor = scheduleJSON[key].hexColor;
@@ -66,12 +65,12 @@ $(document).ready(function() {
     $('#submit').click(function() {
     	var station = $("#stations").val();
     	updatePage(station);
-     //   if (!runButtonInterval) {
-      //      setInterval(function() {
-      //          updatePage(station);
-      //      }, 60000);
-     //       runButtonInterval = true;
-     //   }
+        if (!runButtonInterval) {
+            setInterval(function() {
+                updatePage(station);
+            }, 60000);
+            runButtonInterval = true;
+        }
 
     });
 
