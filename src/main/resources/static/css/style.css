@@ -1,0 +1,36 @@
+
+.content {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin: 15px 10px;
+	min-height: 50px;
+}
+
+#results {
+	clear: left;
+	margin-top: 10px;
+}
+
+.platform-list {
+	padding-left: 0;
+}
+
+.platform-list li {
+	list-style-type: none;
+}
+
+.platform-list span {
+	margin-left: 15px;
+}
+
+span.route-spacer {
+	width: 10px;
+    height: 10px;
+    display: inline-flex;
+    border: 1px solid black;
+}
+
+#eta {
+	margin-top: 10px;
+}

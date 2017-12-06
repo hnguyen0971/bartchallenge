@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Bart to West Oakland</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/js/index.js"></script>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+	<div class="content">
+		<h3 id="currTime" style="display:block"></h3>
+		<p id="numTrains" style="display:block"></p>
+
+		<div th:object="${bartStations}">
+		    <select id="stations" class="pull-left">
+		        <option th:each="bartStation : ${bartStations}"
+		                th:value="${bartStation.abbreviation}"
+		                th:text="${bartStation.name}"></option>
+		    </select>
+		</div>
+
+		<button id="submit" class="pull-left">Go</button>
+
+		<div id="results"></div>
+
+		<p id="eta" style="display:block"></p>
+	</div>
+
+</body>
+</html>
