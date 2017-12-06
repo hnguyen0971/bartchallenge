@@ -1,6 +1,7 @@
 # bartchallenge
 Bart Challenge Instructions 
 
-1. mvn package spring-boot:repackage
-2. cd target
-3. java -jar rx-0.0.1-SNAPSHOT.jar
+1. cd bartchallenge
+2. mvn package spring-boot:repackage
+3. cd target
+4. java -jar woakbart-0.0.1-SNAPSHOT-spring-boot.jar
